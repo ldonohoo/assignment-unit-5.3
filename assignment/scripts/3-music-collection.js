@@ -12,11 +12,29 @@ function addToCollection(collection, title, artist, yearPublished) {
   return album;
 }
 
+function printAlbum(album) {
+  console.log('-----------------------------------------------');
+  console.log(`New album added:`); 
+  console.log('Album Title:', album.title);
+  console.log('Album Artist:', album.artist);
+  console.log('Album Year Published:', album.yearPublished);
+}
 
-
-
-
-
+let newAlbum = {};
+newAlbum = addToCollection(myCollection, 'Music to Code By', 'geekyBass', 2021);
+printAlbum(newAlbum);
+newAlbum = addToCollection(myCollection, 'Chedar Biscuit', 'Tall Chair Group', 1990);
+printAlbum(newAlbum);
+newAlbum = addToCollection(myCollection, 'Falling Tray', 'hipHopHideaway', 2023);
+printAlbum(newAlbum);
+newAlbum = addToCollection(myCollection, 'Clouds Suck', 'Squish Mouse', 2019);
+printAlbum(newAlbum);
+newAlbum = addToCollection(myCollection, 'Lockdown', 'Bored Travelers', 2020);
+printAlbum(newAlbum);
+newAlbum = addToCollection(myCollection, 'Mellow Donuts', 'Shef', 2024);
+printAlbum(newAlbum);
+console.log('-----------------------------------------------');
+console.log(`My collection: ${myCollection}`);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
