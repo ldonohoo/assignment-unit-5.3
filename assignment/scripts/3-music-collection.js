@@ -20,7 +20,6 @@ let newAlbum = {};
 // adds an album to a collection of albums
 function addToCollection(collection, title, artist, yearPublished, tracks) {
   let album = {};
-  let newTrack = {};
   album.title = title;
   album.artist = artist;
   album.yearPublished = yearPublished;
@@ -170,12 +169,26 @@ console.log('-----------------------------------------------');
 showCollection(myCollection);
 
 // test findByArtist function
+//   with artist that should be found:
 let findArtist = 'Cheddar Biscuit';
 let subCollection = findByArtist(myCollection, findArtist);
 console.log('-----------------------------------------------');
 console.log(`Found these albums with artist ${findArtist}`);
 showCollection(subCollection);
-
+// with artist that doesn't exist:
+findArtist = 'Cheddar Roll';
+subCollection = findByArtist(myCollection, findArtist);
+console.log('-----------------------------------------------');
+console.log(`Found these albums with artist ${findArtist}`);
+console.log('  (artist does not exist should be blank)');
+showCollection(subCollection);
+// with artist that is blank:
+findArtist = '';
+subCollection = findByArtist(myCollection, findArtist);
+console.log('-----------------------------------------------');
+console.log(`Found these albums with artist ${findArtist}`);
+console.log('  (artist does not exist should be blank)');
+showCollection(subCollection);
 
 
 // test search function (with testSearch function lol) -several tests
