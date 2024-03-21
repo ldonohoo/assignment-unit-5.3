@@ -84,7 +84,7 @@ Update the `3-music-collection.js` file to do the following:
         2. NAME: DURATION
     ```
   - Update `search` to allow an optional `trackName` search criteria. 
-    - IF the search object has a `trackName` property, only search for that, *ignoring* any `artist` or `yearPublished` properties.
+    - IF the search object has a `trackName` property, only search for that, *ignoring* any `artist` or `yearPublished` properties.h
 
 > Make sure to test all your code!
 
